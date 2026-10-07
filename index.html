@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Opinión del Evento</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            color: #666666;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444444;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        input[type="file"] {
+            padding: 7px;
+            background-color: #fafafa;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Encuesta de Opinión del Evento</h1>
+    <p>Agradecemos sus comentarios. Su opinión nos ayudará a mejorar futuros eventos.</p>
+    
+    <!-- 
+      IMPORTANTE: 
+      1. Reemplaza 'TU_CORREO@DOMINIO.COM' por el correo donde quieres recibir las respuestas.
+      2. Se incluye enctype="multipart/form-data" para permitir la subida de archivos/imágenes.
+    -->
+    <form action="https://formsubmit.co/jasarmientor@hotmail.com" method="POST" enctype="multipart/form-data">
+        
+        <!-- Campos de configuración de FormSubmit -->
+        <input type="hidden" name="_next" value="https://formsubmit.co">
+        <input type="hidden" name="_subject" value="Nueva opinión sobre el Evento">
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="opinion">Opinión abierta sobre el evento:</label>
+            <textarea id="opinion" name="Opinion" placeholder="Escribe aquí tus comentarios..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="archivo">Adjuntar imagen o archivo (opcional):</label>
+            <input type="file" id="archivo" name="Archivo_Adjunto" accept="image/*,application/pdf">
+        </div>
+
+        <button type="submit">Enviar Opinión</button>
+    </form>
+</div>
+
+</body>
+</html>
